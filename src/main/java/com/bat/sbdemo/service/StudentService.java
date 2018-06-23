@@ -6,7 +6,7 @@ import com.bat.sbdemo.entity.Student;
 
 public interface StudentService {
 
-	public List<Student> getAllStudent();
-	
-	public Student addStudent(Student student);
+    public List<Student> getAllStudent();
+
+    public Student addStudent(Student student);
 }

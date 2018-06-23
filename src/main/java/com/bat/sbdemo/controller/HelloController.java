@@ -9,16 +9,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/hello")
 public class HelloController {
 
-	@RequestMapping("/world")
+    @RequestMapping("/world")
     public String sayHello() {
-		String result = "Hello Guys~~~~";
-		String resJson = "{\"Hello\": \"World\"}";
-		
-		ArrayList<String> list = new ArrayList<String>();
-		list.add("beijing");
-		list.add("tianjin");
-		list.add("chongqing");
-		list.add("shanghai");
+        String result = "Hello Guys~~~~";
+        String resJson = "{\"Hello\": \"World\"}";
+
+        ArrayList<String> list = new ArrayList<String>();
+        list.add("beijing");
+        list.add("tianjin");
+        list.add("chongqing");
+        list.add("shanghai");
         return list.toString();
     }
 }

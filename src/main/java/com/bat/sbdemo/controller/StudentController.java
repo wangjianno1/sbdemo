@@ -20,30 +20,30 @@ import com.bat.sbdemo.utils.ResultUtil;
 @RequestMapping("/student")
 public class StudentController {
 
-	private final Logger logger = LoggerFactory.getLogger(StudentController.class);
-	
-	@Autowired
-	private StudentService studentService;
+    private final Logger logger = LoggerFactory.getLogger(StudentController.class);
 
-	@GetMapping("/all")
-	public ResultBody<List<Student>> getAllStudent() throws Exception {
-		List<Student> allStudent = studentService.getAllStudent();
-		//throw new GlobalProcessException("我是全局处理异常哦。。。。");
-		logger.info("infoinfoinfo~~~~~~~~~~~~~~~~~");
-		logger.debug("debugdebugdebug~~~~~~~~~~~~~~~~~");
-		return ResultUtil.success(allStudent);
-	}
+    @Autowired
+    private StudentService studentService;
 
-	@PostMapping("/add")
-	public ResultBody<Student> addStudent(@RequestParam("name") String name, @RequestParam("age") Integer age,
-			@RequestParam("sex") String sex, @RequestParam("score") Integer score) {
-		Student student = new Student();
-		student.setName(name);
-		student.setAge(age);
-		student.setSex(sex);
-		student.setScore(score);
+    @GetMapping("/all")
+    public ResultBody<List<Student>> getAllStudent() throws Exception {
+        List<Student> allStudent = studentService.getAllStudent();
+        // throw new GlobalProcessException("我是全局处理异常哦。。。。");
+        logger.info("infoinfoinfo~~~~~~~~~~~~~~~~~");
+        logger.debug("debugdebugdebug~~~~~~~~~~~~~~~~~");
+        return ResultUtil.success(allStudent);
+    }
 
-		studentService.addStudent(student);
-		return ResultUtil.success(student);
-	}
+    @PostMapping("/add")
+    public ResultBody<Student> addStudent(@RequestParam("name") String name, @RequestParam("age") Integer age,
+            @RequestParam("sex") String sex, @RequestParam("score") Integer score) {
+        Student student = new Student();
+        student.setName(name);
+        student.setAge(age);
+        student.setSex(sex);
+        student.setScore(score);
+
+        studentService.addStudent(student);
+        return ResultUtil.success(student);
+    }
 }

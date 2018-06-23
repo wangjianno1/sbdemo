@@ -14,12 +14,12 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 @SpringBootTest
 @AutoConfigureMockMvc
 public class StudentControllerTest {
-	
-	@Autowired
-	private MockMvc mockMvc;
 
-	@Test
-	public void getAllStudentTest() throws Exception {
-		mockMvc.perform(MockMvcRequestBuilders.get("/student/all")).andExpect(MockMvcResultMatchers.status().isOk());
-	}
+    @Autowired
+    private MockMvc mockMvc;
+
+    @Test
+    public void getAllStudentTest() throws Exception {
+        mockMvc.perform(MockMvcRequestBuilders.get("/student/all")).andExpect(MockMvcResultMatchers.status().isOk());
+    }
 }

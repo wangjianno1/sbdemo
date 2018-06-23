@@ -14,26 +14,26 @@ import com.bat.sbdemo.entity.Student;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class StudentServiceTest {
-	
-	@Autowired
-	private StudentService studentService;
-	
-	@Test
-	public void getAllStudentTest() {
-		List<Student> allStudent = studentService.getAllStudent();
-		Assert.assertNotNull(allStudent);
-	}
-	
-	@Test
-	public void addStudentTest() {
-		Student student = new Student();
-		student.setName("xueMM");
-		student.setAge(20);
-		student.setSex("male");
-		student.setScore(90);
-		Student stu = studentService.addStudent(student);
-		Assert.assertTrue(stu.getName().equalsIgnoreCase("xueMM"));
-		
-	}
+
+    @Autowired
+    private StudentService studentService;
+
+    @Test
+    public void getAllStudentTest() {
+        List<Student> allStudent = studentService.getAllStudent();
+        Assert.assertNotNull(allStudent);
+    }
+
+    @Test
+    public void addStudentTest() {
+        Student student = new Student();
+        student.setName("xueMM");
+        student.setAge(20);
+        student.setSex("male");
+        student.setScore(90);
+        Student stu = studentService.addStudent(student);
+        Assert.assertTrue(stu.getName().equalsIgnoreCase("xueMM"));
+
+    }
 
 }

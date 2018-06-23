@@ -7,59 +7,59 @@ import javax.persistence.Id;
 @Entity
 public class Student {
 
-	@Id
-	@GeneratedValue
-	private Integer id;
-	
-	private String name;
-	
-	private Integer age;
-	
-	private String sex;
-	
-	private Integer score;
+    @Id
+    @GeneratedValue
+    private Integer id;
 
-	public Student() {
-	}
+    private String name;
 
-	public Integer getId() {
-		return id;
-	}
+    private Integer age;
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    private String sex;
 
-	public String getName() {
-		return name;
-	}
+    private Integer score;
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public Student() {
+    }
 
-	public Integer getAge() {
-		return age;
-	}
+    public Integer getId() {
+        return id;
+    }
 
-	public void setAge(Integer age) {
-		this.age = age;
-	}
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-	public String getSex() {
-		return sex;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setSex(String sex) {
-		this.sex = sex;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public Integer getScore() {
-		return score;
-	}
+    public Integer getAge() {
+        return age;
+    }
 
-	public void setScore(Integer score) {
-		this.score = score;
-	}
-	
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public Integer getScore() {
+        return score;
+    }
+
+    public void setScore(Integer score) {
+        this.score = score;
+    }
+
 }

@@ -12,13 +12,13 @@ import com.bat.sbdemo.utils.ResultUtil;
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
-	@ExceptionHandler(value=GlobalProcessException.class)
-	@ResponseBody
+    @ExceptionHandler(value = GlobalProcessException.class)
+    @ResponseBody
     public ResultBody<Object> handleProcessException(Exception ex, HttpServletRequest request) {
         return ResultUtil.exception(ex.getMessage());
     }
-     
-    @ExceptionHandler(value=Exception.class)
+
+    @ExceptionHandler(value = Exception.class)
     @ResponseBody
     public ResultBody<Object> handleUnknownException(Exception ex, HttpServletRequest request) {
         return ResultUtil.error();
